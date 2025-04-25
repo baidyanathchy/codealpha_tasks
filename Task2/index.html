@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Web Music Player</h1>
+        </header>
+        <div id="search-container">
+            <input type="text" id="search-input" placeholder="Search for songs, artists, or genres...">
+        </div>
+        <div id="category-container">
+            <button class="category-button active" data-category="all">All</button>
+            <button class="category-button" data-category="pop">Pop</button>
+            <button class="category-button" data-category="rock">Rock</button>
+            <button class="category-button" data-category="jazz">Jazz</button>
+            </div>
+        <ul id="music-list">
+            </ul>
+        <div class="player-container">
+            <div class="current-song">
+                <img id="album-art" src="default-album-art.png" alt="Album Art">
+                <div class="song-info">
+                    <h2 id="song-title">No Song Selected</h2>
+                    <p id="artist-name">--</p>
+                </div>
+            </div>
+            <div class="controls">
+                <div>
+                    <button id="prev-btn" class="play-btn">Previous</button>
+                    <button id="play-btn" class="play-btn">Play</button>
+                    <button id="pause-btn" class="play-btn" style="display: none;">Pause</button>
+                    <button id="next-btn" class="play-btn">Next</button>
+                </div>
+                <div id="progress-bar">
+                    <div id="progress-bar-fill"></div>
+                </div>
+                <div id="volume-control">
+                    <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1">
+                    <button id="mute-button">Mute</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="playlist-container">
+            <h2>Playlists</h2>
+            <ul id="playlist-list">
+                </ul>
+            <div id="new-playlist-input" style="display: none;">
+                <input type="text" id="new-playlist-name" placeholder="Enter playlist name">
+                <button id="create-playlist-confirm">Create</button>
+                <button id="create-playlist-cancel">Cancel</button>
+            </div>
+            <button id="create-playlist-button">Create New Playlist</button>
+            <div id="current-playlist-view" style="display: none;">
+                <h2>Current Playlist: <span id="current-playlist-name-display"></span></h2>
+                <ul id="current-playlist-songs">
+                    </ul>
+                <button id="close-playlist-view">Close</button>
+            </div>
+        </div>
+        <audio id="audio-player"></audio> <hr>
+        <p class="copyright">&copy;All Rights reserved to @baidyanathchy</p>
+    </div>
+
+        
+    <script src="script.js"></script>
+</body>
+</html>
